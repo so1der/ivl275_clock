@@ -23,7 +23,7 @@ It's just a simple step up converter on the MC34063A IC. You can use [THIS](http
 
 In my case, I assembled this module myself, but no one stops You from using completed modules such as **HW-111** for example. You can even use different IC (e.g. DS3231), but in this case You need to rewrite firmware's code. In this project I didn't use RTC libraries (such as **RTCLib**) - I wanted to drive RTC directly, so I put all necessary code into main cpp file.
 
-DS1307 also generates 1 Hz squared waveform that drives blinking of the DP dots.
+DS1307 also generates 1 Hz square waveform that drives blinking of the DP dots.
 
 ## Filament voltage
 
