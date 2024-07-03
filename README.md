@@ -2,7 +2,13 @@
 
 ![alt tag](https://raw.githubusercontent.com/so1der/ivl275_clock/main/pictures/main.jpg "Main photo")
 
-So this is a simple clock I made a while ago. It combines some bad engineering decisions, but still it works. Main IC's are:
+
+
+So this is a simple clock I made a while ago. It combines some bad engineering decisions, but still it works. And also has cool animation for every hour change!
+
+![alt tag](https://raw.githubusercontent.com/so1der/ivl275_clock/main/pictures/animation.gif "Animation")
+
+Main IC's are:
 
 - ATmega8A - MCU to drive all together
 - DS1307 - RTC to count passed time
