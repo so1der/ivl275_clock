@@ -4,7 +4,7 @@
 
 
 
-So this is a simple clock I made a while ago. It combines some bad engineering decisions, but still it works. And also has cool animation for every hour change!
+So this is a simple clock I made a while ago. It combines some bad engineering decisions, but still it works. And also has cool animation for every hour change! And "random" glitch (blinking) approximately every 3 minutes (You can change it).
 
 ![alt tag](https://raw.githubusercontent.com/so1der/ivl275_clock/main/pictures/animation.gif "Animation")
 
@@ -31,6 +31,8 @@ In my case, I assembled this module myself, but no one stops You from using comp
 
 DS1307 also generates 1 Hz square waveform that drives blinking of the DP dots.
 
+I'm also questioning capacitors near crystal - C3 and C4. Maybe there is no need for them.
+
 ## Filament voltage
 
 As I said before - it would be better to use AC for the filament. But in my case, I simply used voltage regulator to drop 5V to approximately 1.8V. Cons of this decision - uneven brightness of the display, and maybe shorter period of display life.
@@ -38,3 +40,17 @@ As I said before - it would be better to use AC for the filament. But in my case
 ## ULN2803A
 
 This IC allows us to pull VFD segments to the ground, so we can "shut" them. So yeah, by default all segments are emitting light, and by "turning off" various segments, we can display certain numbers. Kind of a "reversed" control. R2-R8 are used to prevent short circuit when we are pulling segments to the ground.
+
+## ATmega8A
+
+I used bare ATmega8A with 8 MHz Crystals. But You can use almost any AVR MCU, and even Arduino boards.
+
+I assembled all this on small green prototype board. It looks kinda messy at the bottom, but it's not a big problem.
+
+![alt tag](https://raw.githubusercontent.com/so1der/ivl275_clock/main/pictures/assembled.jpg "Assembled clock")
+
+## About code
+
+I wrote this project in PlatformIO. You can take `ivl275_firmware` directory, compile code with PlatformIO, and upload it to Your MCU, and You good to go!
+
+If You have any questions or suggestions, please, let me know!
